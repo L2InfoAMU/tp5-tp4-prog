@@ -13,6 +13,7 @@ public class BruteRasterImage implements Image{
         this.width = width;
         this.height = height;
         createRepresentation();
+        setPixelsColor(color);
     }
 
     public BruteRasterImage(Color[][] colors){
@@ -43,7 +44,6 @@ public class BruteRasterImage implements Image{
 
     public void createRepresentation(){
        colors = new Color[getWidth()][getHeight()];
-       setPixelsColor(color);
     }
 
 }
