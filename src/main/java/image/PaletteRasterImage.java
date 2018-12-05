@@ -5,7 +5,7 @@ import util.Matrices;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaletteRasterImage {
+public class PaletteRasterImage implements Image {
 
     List<Color> palette;
     int[][] indexesOfColor;
@@ -18,7 +18,6 @@ public class PaletteRasterImage {
         this.width = width;
         this.height = height;
         createRepresentation();
-        palette.add(color);
         setPixelsColor(color);
 
     }
@@ -27,8 +26,8 @@ public class PaletteRasterImage {
         Matrices.requiresNonNull(pixels);
         Matrices.requiresNonZeroDimensions(pixels);
         this.pixels = pixels;
-        this.width = indexesOfColor.length;
-        this.height= indexesOfColor[0].length;
+        this.width = pixels.length;
+        this.height= pixels[0].length;
         createRepresentation();
         setPixelsColor(pixels);
     }
