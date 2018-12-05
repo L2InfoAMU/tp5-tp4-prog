@@ -16,7 +16,6 @@ public class VectorImage implements Image {
         this.shapes = shapes;
     }
 
-
     @Override
     public Color getPixelColor(int x, int y) {
         for(Shape shape : shapes)
