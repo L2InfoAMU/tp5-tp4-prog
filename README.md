@@ -9,6 +9,7 @@ On va considérer quatre manières de représenter une image en couleur et donc 
 - `SparseRasterImage` 
 - `VectorImage` 
 
-## Membre du projet
+## Membres du projet
 
 - MONTAGNER Guillaume
+- ELAMINE Raïd
