@@ -25,9 +25,9 @@ public class Display implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        imageFactory = new LogoLISFactory();
+        imageFactory =new RasterUniformImageFactory(200,
+                200, Color.RED, RasterImageType.PALETTE);
         this.image = imageFactory.makeImage();
-
         render();
     }
 
