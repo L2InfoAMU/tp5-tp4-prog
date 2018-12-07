@@ -38,6 +38,7 @@ public abstract class RasterImage implements Image {
 
 
     public abstract void createRepresentation();
+
     public abstract void setPixelColor(Color color, int x, int y);
 
     protected void setPixelsColor(Color color) {
@@ -46,12 +47,10 @@ public abstract class RasterImage implements Image {
                 setPixelColor(color, x, y);
     }
 
-    protected void setPixelsColor(Color[][] colors) {
-        for (int index = 0; index < colors.length; index++) {
-            for (int secondIndex = 0; secondIndex < colors[0].length; secondIndex++) {
-                setPixelColor(colors[index][secondIndex], index,secondIndex);
-            }
-        }
+    protected void setPixelsColor(Color[][] pixels){
+        for(int x = 0; x<getWidth(); x++ )
+            for(int y = 0; y<getHeight(); y++)
+                setPixelColor(pixels[x][y], x, y);
     }
 
         public abstract Color getPixelColor(int x, int y);
