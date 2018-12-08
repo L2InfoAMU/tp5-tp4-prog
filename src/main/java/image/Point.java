@@ -6,9 +6,9 @@ import java.util.Objects;
  * Created by Arnaud Labourel on 09/11/2018.
  */
 public class Point {
-    public final int x, y;
+    public int x, y;
 
-    Point(int x, int y) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -25,6 +25,19 @@ public class Point {
     @Override
     public final int hashCode() {
         return Objects.hash(x, y);
+    }
+
+    public int getX(){
+        return x;
+    }
+
+    public int getY(){
+        return y;
+    }
+
+    public double distance (Point p){
+        return Math.sqrt(((this.getX() - p.getX())*(this.getX() - p.getX())) +
+                ((this.getY() - p.getY())*(this.getY() - p.getY())));
     }
 
 
