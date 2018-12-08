@@ -19,6 +19,7 @@ public class LogoLISFactory implements ImageFactory{
 
         List<Shape> list = new ArrayList<>();
         list.add(new Circle(new Point(430,170), 20, Color.RED));
+        list.add(new Annulus(new Circle(new Point(215,85),50, Color.RED), new Circle(new Point(215,85),30, Color.BLUE)));
 
         for (int i = 0; i < colors.length; i++){
             list.add(new Rectangle(xCoordinates[i], yCoordinates[i], widths[i], heights[i], colors[i]));

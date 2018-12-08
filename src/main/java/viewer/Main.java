@@ -15,13 +15,7 @@ import java.io.IOException;
 public class Main extends Application
 {
 
-    public static void main(String[] args) {
-        Point p = new Point(10,10);
-        System.out.println(p.distance(new Point(13,14)));
-        Circle circle = new Circle(p,2, Color.WHITE);
-        System.out.println(circle.contains(new Point(11,11)));
-        launch(args);
-    }
+    public static void main(String[] args) { launch(args); }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
